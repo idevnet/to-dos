@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #e3e9ff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 345px;
+  min-height: 600px;
+  /* background: #d61048; */
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 2px;
+  padding-bottom: 32px;
+}
+
+.todo-header {
+  min-height: 54px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+
+  width: 345px;
+  height: 54px;
+  margin: 0px 0px 15px 0px;
+  padding: 10px 10px 10px 21px;
+  box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.15);
+  background-color: #af7eeb;
+}
+
+h1 {
+  margin: 0px 0px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.todo-list-container {
+  width: 100%;
+  padding: 34px 21px 0px 45px;
+  box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 4px 4px 4px;
+  outline: none;
+  width: 100%;
+  height: 36px;
+  color: #8e96b8;
+  font-size: 16px;
+  border: solid 1px #949cbc;
+  background-color: #f9f9f8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 1px solid #bbb;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: #fff;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px;
+  padding: 0px 0px 22px 0;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #8e96b8;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
+}
+
+.task-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-delete i {
+  font-size: 14px;
+  color: #8e96b8;
+  margin-right: 0px;
+}
+
+.btn-edit i {
+  font-size: 12px;
+  color: #8e96b8;
+  margin-right: 15px;
+}
+.btn-circle i {
+  font-size: 10px;
+  color: #8e96b8;
+  margin-right: 24px;
+  margin-left: 0px;
+}
+
+.btn-navicon i {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 65px;
+}
+
+.btn {
+  margin: 10px auto;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task-btn {
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+
+  width: 152px;
+  height: 45px;
+  margin: 32px 0px -22px -18px;
+  padding: 12px 32px 11px;
+  border-radius: 22.5px;
+  background-color: #af7eeb;
+}
+
+.btn-update {
+  margin-bottom: 80px;
 }
