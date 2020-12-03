@@ -71,7 +71,7 @@ function TodoList() {
       <div className='todo-header'>
       <button className="btn-navicon task-btn">
         <i className="fa fa-navicon"></i></button>
-        <h1>Motiff To-do List</h1></div>
+        <h1>My To-do List</h1></div>
       
       <div className='todo-list-container'>
       <Todo
